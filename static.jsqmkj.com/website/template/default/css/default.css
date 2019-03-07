@@ -68,7 +68,7 @@ ol,ul,li{list-style-type:none;}
 .cp { background:url(../images/copy_close.png) 0 0; width:13px; height:13px; display:block; float:left;margin-top:12px;}
 div.cp:hover{background-position:0 -13px; }
 .copyright_bar{background:#000; width:100%;bottom:0px; left:0px; text-align:center; position:fixed;z-index:1000; filter:alpha(opacity=80);-moz-opacity:0.8;	-khtml-opacity: 0.8;	opacity: 0.8;}
-.new_sitestar_footer_cp{ display:block;position:absolute;bottom :15px;width:274px; height:26px; line-height:26px; overflow:hidden; background:url(../images/sitestar_copyright_bg.png) no-repeat;}
+.new_sitestar_footer_cp{ display:block;position:absolute;bottom :15px;width:422px; height:26px; line-height:26px; overflow:hidden; background:url(../images/sitestar_copyright_bg.png) no-repeat;}
 .new_sitestar_footer_cp span{ display:block;}
 .new_sitestar_footer_cp span.sf_logo{  float:left; background:url(../images/sitestar_copyright_bg.png) no-repeat -10px -39px ; width:104px; height:17px; margin:4px 0 0 8px;}
 .new_sitestar_footer_cp span.sf_font font{font-size:14px; font-weight:bold;margin-left: 5px;margin-right: 5px; }

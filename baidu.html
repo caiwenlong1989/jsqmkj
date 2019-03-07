@@ -47,7 +47,7 @@
         if (point) {
             jd=point.lng;
             wd=point.lat;
-            var addr="南京市";
+            var addr="南京市建邺区凤栖苑113号-8";
             document.getElementById('showPanelBtn').style.backgroundColor="#fff";
             document.getElementById('showPanelBtn').innerHTML="显示检索结果面板<br/>&lt;";
             showmap(jd,wd,addr);
@@ -66,7 +66,7 @@
     }
 
     function showmark(map,poi,addr){
-        var content = '<div style="margin:0;line-height:20px;padding:2px;">南京市建邺区凤栖苑113号-8</div>';
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">地铁2号线到集庆门大街</div>';
         //创建检索信息窗口对象
         var searchInfoWindow = null;
         searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
@@ -94,7 +94,7 @@
             offset   : new BMap.Size(3, 3)    //设置文本偏移量
 
         }
-        var label = new BMap.Label("南京市建邺区凤栖苑113号-8", opts);  // 创建文本标注对象
+        var label = new BMap.Label("南京市建邺区凤栖苑", opts);  // 创建文本标注对象
         label.setStyle({
             backgroundColor : "#fff",
             borderColor : "#808080",
