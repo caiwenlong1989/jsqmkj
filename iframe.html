@@ -186,63 +186,63 @@
             if(interval) var timer=setInterval(autoRun, interval);
         });
 	</script>
-<script type="text/javascript">
-    var lofsettings = jslider_options || {};
-    if (!$.isPlainObject(lofsettings) || $.isEmptyObject(lofsettings)) {
-        lofsettings = {direction: 'opacitys',easing: 'easeInOutExpo',navigatorHeight: 100,navigatorWidth: 310};
-    }
-    jslider_options = null;
-    $(function(){
-        // Init iframe max-height
-        $parent.find(curlayerid+'_frmlofjslider').height(loflayerh);
-        // buttons for next and previous item
-        var $lofjslider_wrapper = $(curlayerid+'_lofslider'),
-            buttons = {previous: $('.button-previous',$lofjslider_wrapper),next: $('.button-next',$lofjslider_wrapper)};
-        // Init jslider container size
-        $lofjslider_wrapper.find('.main-slider-content').width(lofwidth).height(lofheight);
-        //arrow hide
-        // Start play
-        $lofjslider_wrapper.lofJSidernews($.extend({}, lofsettings, {
-            auto: ("0" == "1")?true:false,
-            buttons: buttons,
-            duration: 1200,
-            interval: 1000 * lofint("3"),
-            mainWidth: lofwidth,
-            maxItemDisplay: lofnavshow,
-            onLoaded: function($img){jslider_imgadaptive($img, lofwidth, lofheight);}
-        }));
-        lofsettings = buttons = loflayerw = null;
-        $parent = $curlayer = $lofjslider_wrapper = null;
-    });
-    function jslider_imgadaptive(images, maxwidth, maxheight){
-        var $img = images,ceil = Math.ceil;
-        $img.each(function(i, img){
-            var $target = $(img),curdifw = 0,curdifh = 0;
-            if (img.width >= img.height) {
-                $target.width(maxwidth).height("auto");
-                // Auto fixed height
-                curdifh = maxheight - $target.height();
-                if (curdifh < 0) $target.css({"margin-top": ceil(curdifh / 2)+'px',"margin-left": '0px'});
-                else if (curdifh > 0) {
-                    $target.height(maxheight).width("auto");
-                    curdifw = maxwidth - $target.width();
-                    $target.css({"margin-top": '0px',"margin-left": ceil(curdifw / 2)+'px'});
-                } else $target.css({"margin-top": '',"margin-left": ''});
-            } else {
-                $target.height(maxheight).width("auto");
-                // Auto fixed width
-                curdifw = maxwidth - $target.width();
-                if (curdifw < 0) $target.css({"margin-top": '0px',"margin-left": ceil(curdifw / 2)+'px'});
-                else if (curdifw > 0) {
-                    $target.width(maxwidth).height('auto');
-                    curdifh = maxheight - $target.height();
-                    $target.css({"margin-top": ceil(curdifh / 2)+'px',"margin-left": '0px'});
-                } else $target.css({"margin-top": '',"margin-left": ''});
-            }
-            $target = null;
+	<script type="text/javascript">
+        var lofsettings = jslider_options || {};
+        if (!$.isPlainObject(lofsettings) || $.isEmptyObject(lofsettings)) {
+            lofsettings = {direction: 'opacitys',easing: 'easeInOutExpo',navigatorHeight: 100,navigatorWidth: 310};
+        }
+        jslider_options = null;
+        $(function(){
+            // Init iframe max-height
+            $parent.find(curlayerid+'_frmlofjslider').height(loflayerh);
+            // buttons for next and previous item
+            var $lofjslider_wrapper = $(curlayerid+'_lofslider'),
+                buttons = {previous: $('.button-previous',$lofjslider_wrapper),next: $('.button-next',$lofjslider_wrapper)};
+            // Init jslider container size
+            $lofjslider_wrapper.find('.main-slider-content').width(lofwidth).height(lofheight);
+            //arrow hide
+            // Start play
+            $lofjslider_wrapper.lofJSidernews($.extend({}, lofsettings, {
+                auto: ("0" == "1")?true:false,
+                buttons: buttons,
+                duration: 1200,
+                interval: 1000 * lofint("3"),
+                mainWidth: lofwidth,
+                maxItemDisplay: lofnavshow,
+                onLoaded: function($img){jslider_imgadaptive($img, lofwidth, lofheight);}
+            }));
+            lofsettings = buttons = loflayerw = null;
+            $parent = $curlayer = $lofjslider_wrapper = null;
         });
-        $img = maxwidth = maxheight = null;
-    }
-</script>
+        function jslider_imgadaptive(images, maxwidth, maxheight){
+            var $img = images,ceil = Math.ceil;
+            $img.each(function(i, img){
+                var $target = $(img),curdifw = 0,curdifh = 0;
+                if (img.width >= img.height) {
+                    $target.width(maxwidth).height("auto");
+                    // Auto fixed height
+                    curdifh = maxheight - $target.height();
+                    if (curdifh < 0) $target.css({"margin-top": ceil(curdifh / 2)+'px',"margin-left": '0px'});
+                    else if (curdifh > 0) {
+                        $target.height(maxheight).width("auto");
+                        curdifw = maxwidth - $target.width();
+                        $target.css({"margin-top": '0px',"margin-left": ceil(curdifw / 2)+'px'});
+                    } else $target.css({"margin-top": '',"margin-left": ''});
+                } else {
+                    $target.height(maxheight).width("auto");
+                    // Auto fixed width
+                    curdifw = maxwidth - $target.width();
+                    if (curdifw < 0) $target.css({"margin-top": '0px',"margin-left": ceil(curdifw / 2)+'px'});
+                    else if (curdifw > 0) {
+                        $target.width(maxwidth).height('auto');
+                        curdifh = maxheight - $target.height();
+                        $target.css({"margin-top": ceil(curdifh / 2)+'px',"margin-left": '0px'});
+                    } else $target.css({"margin-top": '',"margin-left": ''});
+                }
+                $target = null;
+            });
+            $img = maxwidth = maxheight = null;
+        }
+	</script>
 </body>
 </html>
